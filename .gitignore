@@ -100,3 +100,4 @@ ENV/
 #pychram
 .idea/
 *.pyc
+logs/
