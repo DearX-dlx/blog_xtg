@@ -45,7 +45,7 @@ database_config = dict(
     # engine_url='postgresql+psycopg2://mhq:1qaz2wsx@localhost:5432/blog',
     # 如果是使用mysql+mysqldb，在确认所有的库表列都是uft8编码后，依然有字符编码报错，
     # 可以尝试在该url末尾加上queryString charset=utf8
-    engine_url='mysql+mysqldb://root:1qaz2wsx@localhost:3306/blog_xtg?charset=utf8',
+    engine_url='mysql+mysqldb://root:123456@localhost:3306/blog_xtg?charset=utf8',
     engine_setting=dict(
         echo=False,  # print sql
         echo_pool=False,
@@ -103,4 +103,12 @@ config = dict(
     navbar_styles={"inverse": "魅力黑", "default": "优雅白"},  # 导航栏样式
     default_avatar_url="identicon",
     application=None,  # 项目启动后会在这里注册整个server，以便在需要的地方调用，勿修改
+)
+
+# 评论功能的邮件发送
+email = dict(
+    email_host="smtp.qq.com",
+    stmp_port=465,
+    email_user="admin@dearx.me",  # 邮箱账户，特别注意邮箱需要打开smtp功能，比如qq邮箱，请自行搜索如何打开smtp功能
+    email_pw="123456" # 邮箱的密码，特别注意邮箱需要打开smtp功能
 )
